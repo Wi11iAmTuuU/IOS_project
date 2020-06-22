@@ -20,7 +20,6 @@
 		63C3274C2496864E0073B595 /* Analyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3274B2496864E0073B595 /* Analyzer.swift */; };
 		63C3274E249686A40073B595 /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3274D249686A40073B595 /* CodeScanner.swift */; };
 		63C32750249686C60073B595 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3274F249686C60073B595 /* Receipt.swift */; };
-		63C32752249686EE0073B595 /* OtherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C32751249686EE0073B595 /* OtherView.swift */; };
 		63C32754249687120073B595 /* ManualInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C32753249687120073B595 /* ManualInputView.swift */; };
 		63C32756249687370073B595 /* LotteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C32755249687370073B595 /* LotteryView.swift */; };
 		63C32758249687610073B595 /* ReceiptLottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C32757249687610073B595 /* ReceiptLottery.swift */; };
@@ -41,7 +40,6 @@
 		63C3274B2496864E0073B595 /* Analyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analyzer.swift; sourceTree = "<group>"; };
 		63C3274D249686A40073B595 /* CodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
 		63C3274F249686C60073B595 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
-		63C32751249686EE0073B595 /* OtherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherView.swift; sourceTree = "<group>"; };
 		63C32753249687120073B595 /* ManualInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualInputView.swift; sourceTree = "<group>"; };
 		63C32755249687370073B595 /* LotteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryView.swift; sourceTree = "<group>"; };
 		63C32757249687610073B595 /* ReceiptLottery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptLottery.swift; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 				63C3274B2496864E0073B595 /* Analyzer.swift */,
 				63C3274D249686A40073B595 /* CodeScanner.swift */,
 				63C3274F249686C60073B595 /* Receipt.swift */,
-				63C32751249686EE0073B595 /* OtherView.swift */,
 				63C32753249687120073B595 /* ManualInputView.swift */,
 				63C32755249687370073B595 /* LotteryView.swift */,
 				63C32757249687610073B595 /* ReceiptLottery.swift */,
@@ -196,7 +193,6 @@
 				63C32754249687120073B595 /* ManualInputView.swift in Sources */,
 				63C32733249683700073B595 /* IOS_Project.xcdatamodeld in Sources */,
 				63C32756249687370073B595 /* LotteryView.swift in Sources */,
-				63C32752249686EE0073B595 /* OtherView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
