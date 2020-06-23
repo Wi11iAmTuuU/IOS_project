@@ -9,11 +9,8 @@
 import Foundation
 
 struct Receipt {
-    var ID: String = ""
-    var Date: String = ""
-    
-    init(id: String, date: String) {
-        ID = id
-        Date = date
-    }
+    var id: String = ""
+    var date: String = ""
+    var prize: Int = 0
+    var isDrawn: Bool = false
 }

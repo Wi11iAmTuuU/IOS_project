@@ -9,10 +9,12 @@
 import SwiftUI
 
 struct ManualInputView: View {
+    @EnvironmentObject var analyzer: Analyzer
     let receiptPattern = "^[A-Z]{2}[0-9]{8}$"
     @State private var receiptDate = Date()
     @State private var receiptID = ""
     @State private var wrongInput = false
+    @State private var isScan = false
     
     var body: some View {
         VStack{
@@ -27,6 +29,7 @@ struct ManualInputView: View {
                 .labelsHidden()
                 Text("發票號碼")
                 TextField("英文２碼＋數字８碼", text: $receiptID)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             .padding([.leading, .trailing], 30)
             VStack(alignment: .center){
@@ -35,6 +38,13 @@ struct ManualInputView: View {
                         let matcher = MyRegex(self.receiptPattern)
                         if matcher.match(input: self.receiptID) {
                             self.wrongInput = false
+                            let dateFormatter = DateFormatter()
+                            dateFormatter.dateFormat = "yyyyMMdd"
+                            let date = dateFormatter.string(from: self.receiptDate)
+                            self.analyzer.manual(ID: self.receiptID, Date: date)
+                            withAnimation {
+                                self.isScan = true
+                            }
                         }else {
                             self.wrongInput = true
                         }
@@ -51,6 +61,11 @@ struct ManualInputView: View {
                     }
             }
             .padding(.top, 10)
+            .toast(isPresented: self.$isScan){
+                HStack{
+                    Text("\(self.analyzer.analyzeResult)")
+                }
+            }
             Spacer()
         }
     }

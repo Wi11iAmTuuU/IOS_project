@@ -23,6 +23,7 @@
 		63C32754249687120073B595 /* ManualInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C32753249687120073B595 /* ManualInputView.swift */; };
 		63C32756249687370073B595 /* LotteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C32755249687370073B595 /* LotteryView.swift */; };
 		63C32758249687610073B595 /* ReceiptLottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C32757249687610073B595 /* ReceiptLottery.swift */; };
+		63CE453C24A2021100A2A7AC /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CE453B24A2021100A2A7AC /* Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		63C32753249687120073B595 /* ManualInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualInputView.swift; sourceTree = "<group>"; };
 		63C32755249687370073B595 /* LotteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryView.swift; sourceTree = "<group>"; };
 		63C32757249687610073B595 /* ReceiptLottery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptLottery.swift; sourceTree = "<group>"; };
+		63CE453B24A2021100A2A7AC /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				63C32753249687120073B595 /* ManualInputView.swift */,
 				63C32755249687370073B595 /* LotteryView.swift */,
 				63C32757249687610073B595 /* ReceiptLottery.swift */,
+				63CE453B24A2021100A2A7AC /* Toast.swift */,
 			);
 			path = IOS_Project;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63CE453C24A2021100A2A7AC /* Toast.swift in Sources */,
 				63C3272E249683700073B595 /* AppDelegate.swift in Sources */,
 				63C3274E249686A40073B595 /* CodeScanner.swift in Sources */,
 				63C32730249683700073B595 /* SceneDelegate.swift in Sources */,

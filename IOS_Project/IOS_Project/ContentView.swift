@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var analyzer: Analyzer
     var body: some View {
         TabView{
             ReceiptListView().tabItem{
@@ -17,7 +18,7 @@ struct ContentView: View {
                 }
             }
             ReceiptLotteryView().tabItem {
-                NavigationLink(destination: ReceiptLotteryView()){
+                NavigationLink(destination: ReceiptLotteryView().environmentObject(Analyzer())){
                     Text("掃描")
                 }
             }
