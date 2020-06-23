@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import CoreData
+import UIKit
 
 class Analyzer:ObservableObject {
     let receiptPattern = "[A-Z]{2}[0-9]{8}"
@@ -16,6 +18,10 @@ class Analyzer:ObservableObject {
     @Published var tempReceipt: Receipt = Receipt(id: "", date: "", prize: 0, isDrawn: false)
     @Published var repeatInput: Bool = false
     @Published var analyzeResult: String = ""
+    
+    let myEntityName = "Receipts"
+    let myContext = (UIApplication.shared.delegate as! AppDelegate)
+            .persistentContainer.viewContext
     
     func transform(data: String){
         tempReceipt = Receipt(id: "", date: "", prize: 0, isDrawn: false)
@@ -28,6 +34,7 @@ class Analyzer:ObservableObject {
             if checkReceipt(){
                 checkReceiptLottery()
                 receipts.append(tempReceipt)
+                insertData()
                 repeatInput = false
             }
             else{
@@ -65,6 +72,7 @@ class Analyzer:ObservableObject {
         if checkReceipt(){
             checkReceiptLottery()
             receipts.append(tempReceipt)
+            insertData()
             repeatInput = false
         }
         else{
@@ -133,6 +141,31 @@ class Analyzer:ObservableObject {
                     }
                 }
             }
+        }
+    }
+    
+    func loadData(){
+        let coreDataConnect = CoreDataConnect(context: myContext)
+        let selectResult = coreDataConnect.retrieve(
+            myEntityName, predicate: nil, sort: [["id":true]], limit: nil)
+        if let results = selectResult {
+            for result in results {
+                receipts.append(Receipt(id: result.value(forKey: "id")! as! String , date: result.value(forKey: "date")! as! String, prize: result.value(forKey: "prize")! as! Int, isDrawn: result.value(forKey: "isDrawn")! as! Bool))
+            }
+        }
+    }
+    
+    func insertData(){
+        let coreDataConnect = CoreDataConnect(context: myContext)
+        let insertResult = coreDataConnect.insert(
+        myEntityName, attributeInfo: [
+            "date" : "\(tempReceipt.date)",
+            "id" : "\(tempReceipt.id)",
+            "isDrawn" : "\(tempReceipt.isDrawn)",
+            "prize" : "\(tempReceipt.prize)"
+        ])
+        if insertResult {
+            print("新增資料成功")
         }
     }
 }

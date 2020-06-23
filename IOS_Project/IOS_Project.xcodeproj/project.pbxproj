@@ -24,6 +24,7 @@
 		63C32756249687370073B595 /* LotteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C32755249687370073B595 /* LotteryView.swift */; };
 		63C32758249687610073B595 /* ReceiptLottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C32757249687610073B595 /* ReceiptLottery.swift */; };
 		63CE453C24A2021100A2A7AC /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CE453B24A2021100A2A7AC /* Toast.swift */; };
+		63CE453E24A2374200A2A7AC /* CoreDataConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CE453D24A2374200A2A7AC /* CoreDataConnect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		63C32755249687370073B595 /* LotteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryView.swift; sourceTree = "<group>"; };
 		63C32757249687610073B595 /* ReceiptLottery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptLottery.swift; sourceTree = "<group>"; };
 		63CE453B24A2021100A2A7AC /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		63CE453D24A2374200A2A7AC /* CoreDataConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataConnect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				63C32755249687370073B595 /* LotteryView.swift */,
 				63C32757249687610073B595 /* ReceiptLottery.swift */,
 				63CE453B24A2021100A2A7AC /* Toast.swift */,
+				63CE453D24A2374200A2A7AC /* CoreDataConnect.swift */,
 			);
 			path = IOS_Project;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				63C32750249686C60073B595 /* Receipt.swift in Sources */,
 				63C3274C2496864E0073B595 /* Analyzer.swift in Sources */,
 				63C32758249687610073B595 /* ReceiptLottery.swift in Sources */,
+				63CE453E24A2374200A2A7AC /* CoreDataConnect.swift in Sources */,
 				63C32748249686060073B595 /* ReceiptListView.swift in Sources */,
 				63C3274A2496862D0073B595 /* ReceiptLotteryView.swift in Sources */,
 				63C32735249683700073B595 /* ContentView.swift in Sources */,

@@ -22,6 +22,8 @@ struct ContentView: View {
                     Text("掃描")
                 }
             }
+        }.onAppear {
+            self.analyzer.loadData()
         }
     }
 }
