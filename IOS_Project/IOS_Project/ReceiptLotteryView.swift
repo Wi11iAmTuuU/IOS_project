@@ -12,9 +12,7 @@ import AVFoundation
 struct ReceiptLotteryView: View {
     @EnvironmentObject var analyzer: Analyzer
     @State private var codeDetail = ""
-    @State private var isSharePresented: Bool = false
     @State private var isLight = false
-    @State private var isNavigationBarHidden = true
     @State private var isLottery = false
     @State private var isManual = false
     @State private var isScan = false
@@ -77,17 +75,11 @@ struct ReceiptLotteryView: View {
                 }
             }
             .frame(height: 300)
+            // 小怪獸放置處
             
-            Text("內文: \(codeDetail)")
-            Text("辨識結果:\(analyzer.receiptDetail)")
-            Text("發票號: \(analyzer.tempReceipt.id)")
-            Text("發票日期: \(analyzer.tempReceipt.date)")
+            //
             Spacer()
         }
-        .navigationBarTitle("掃描")
-        .navigationBarHidden(self.isNavigationBarHidden)
-        .onAppear{self.isNavigationBarHidden = true}
-        .onDisappear{self.isNavigationBarHidden = false}
         .toast(isPresented: self.$isScan){
             HStack{
                 Text("\(self.analyzer.analyzeResult)")
@@ -95,8 +87,8 @@ struct ReceiptLotteryView: View {
         }
     }
     
+    // 處理QR-code
     func handleScan(result: Result<String, CodeScannerView.ScanError>) {
-        isSharePresented = false
         switch result {
         case .success(let code):
             codeDetail = code
@@ -109,6 +101,7 @@ struct ReceiptLotteryView: View {
         }
     }
     
+    // 手電筒啓閉
     func toggleTorch(on: Bool) {
         guard let device = AVCaptureDevice.default(for: .video) else { return }
 
