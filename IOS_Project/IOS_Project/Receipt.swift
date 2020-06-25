@@ -13,4 +13,5 @@ struct Receipt {
     var date: String = ""
     var prize: Int = 0
     var isDrawn: Bool = false
+    var amount: Int = 0
 }

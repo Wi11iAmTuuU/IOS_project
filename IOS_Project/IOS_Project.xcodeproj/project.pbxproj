@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5580862424A4E75F00E7C188 /* ReceiptRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580862324A4E75F00E7C188 /* ReceiptRowView.swift */; };
 		63C3272E249683700073B595 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3272D249683700073B595 /* AppDelegate.swift */; };
 		63C32730249683700073B595 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3272F249683700073B595 /* SceneDelegate.swift */; };
 		63C32733249683700073B595 /* IOS_Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63C32731249683700073B595 /* IOS_Project.xcdatamodeld */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5580862324A4E75F00E7C188 /* ReceiptRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptRowView.swift; sourceTree = "<group>"; };
 		63C3272A249683700073B595 /* IOS_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C3272D249683700073B595 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63C3272F249683700073B595 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				63C32757249687610073B595 /* ReceiptLottery.swift */,
 				63CE453B24A2021100A2A7AC /* Toast.swift */,
 				63CE453D24A2374200A2A7AC /* CoreDataConnect.swift */,
+				5580862324A4E75F00E7C188 /* ReceiptRowView.swift */,
 			);
 			path = IOS_Project;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				63C32750249686C60073B595 /* Receipt.swift in Sources */,
 				63C3274C2496864E0073B595 /* Analyzer.swift in Sources */,
 				63C32758249687610073B595 /* ReceiptLottery.swift in Sources */,
+				5580862424A4E75F00E7C188 /* ReceiptRowView.swift in Sources */,
 				63CE453E24A2374200A2A7AC /* CoreDataConnect.swift in Sources */,
 				63C32748249686060073B595 /* ReceiptListView.swift in Sources */,
 				63C3274A2496862D0073B595 /* ReceiptLotteryView.swift in Sources */,
@@ -338,14 +342,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"IOS_Project/Preview Content\"";
-				DEVELOPMENT_TEAM = 6L2P9FBHYM;
+				DEVELOPMENT_TEAM = 62AMN3F46R;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = IOS_Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ntut.IOS-Project";
+				PRODUCT_BUNDLE_IDENTIFIER = "-0590026";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -358,14 +362,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"IOS_Project/Preview Content\"";
-				DEVELOPMENT_TEAM = 6L2P9FBHYM;
+				DEVELOPMENT_TEAM = 62AMN3F46R;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = IOS_Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ntut.IOS-Project";
+				PRODUCT_BUNDLE_IDENTIFIER = "-0590026";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

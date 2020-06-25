@@ -13,6 +13,7 @@ struct ManualInputView: View {
     let receiptPattern = "^[A-Z]{2}[0-9]{8}$"
     @State private var receiptDate = Date()
     @State private var receiptID = ""
+    @State private var receiptAmount = 0
     @State private var wrongInput = false
     @State private var isScan = false
     
@@ -30,6 +31,9 @@ struct ManualInputView: View {
                 Text("發票號碼")
                 TextField("英文２碼＋數字８碼", text: $receiptID)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                Text("發票金額")
+                TextField("發票金額", value: $receiptAmount, formatter: NumberFormatter())
+                .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             .padding([.leading, .trailing], 30)
             VStack(alignment: .center){
@@ -41,7 +45,7 @@ struct ManualInputView: View {
                             let dateFormatter = DateFormatter()
                             dateFormatter.dateFormat = "yyyyMMdd"
                             let date = dateFormatter.string(from: self.receiptDate)
-                            self.analyzer.manual(ID: self.receiptID, Date: date)
+                            self.analyzer.manual(ID: self.receiptID, Date: date, Amount: self.receiptAmount)
                             withAnimation {
                                 self.isScan = true
                             }

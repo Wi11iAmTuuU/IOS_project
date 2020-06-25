@@ -14,7 +14,7 @@ class Analyzer:ObservableObject {
     let receiptPattern = "[A-Z]{2}[0-9]{8}"
     var receiptLotterys: [ReceiptLottery] = winningNumbers
     @Published var receipts: [Receipt] = []
-    @Published var tempReceipt: Receipt = Receipt(id: "", date: "", prize: 0, isDrawn: false)
+    @Published var tempReceipt: Receipt = Receipt(id: "", date: "", prize: 0, isDrawn: false, amount: 0)
     @Published var repeatInput: Bool = false
     @Published var analyzeResult: String = ""
     
@@ -24,12 +24,15 @@ class Analyzer:ObservableObject {
     
     // 處理QR-code資訊
     func transform(data: String){
-        tempReceipt = Receipt(id: "", date: "", prize: 0, isDrawn: false)
+        tempReceipt = Receipt(id: "", date: "", prize: 0, isDrawn: false, amount: 0)
         let matcher = MyRegex(self.receiptPattern)
         let receipt = String(data.prefix(10))
         if matcher.match(input: receipt) {
             tempReceipt.id = receipt
             tempReceipt.date = (data as NSString).substring(with: NSMakeRange(10, 7))
+            if let amount = UInt8(((data as NSString).substring(with: NSMakeRange(29, 8)) as String), radix: 16) {
+                tempReceipt.amount = Int(amount)
+            }
             analyzeLottery()
         }else{
             tempReceipt.id = ""
@@ -39,11 +42,12 @@ class Analyzer:ObservableObject {
     }
     
     // 處理手動輸入資訊
-    func manual(ID: String,Date: String) {
+    func manual(ID: String, Date: String, Amount: Int) {
         let year = String(Int(String(Date.prefix(4)))! - 1911)
         let month = (Date as NSString).substring(with: NSMakeRange(4, 4))
         tempReceipt.id = ID
         tempReceipt.date = year + month
+        tempReceipt.amount = Amount
         analyzeLottery()
     }
     
@@ -121,7 +125,7 @@ class Analyzer:ObservableObject {
                     case 8:
                         tempReceipt.prize = 200000
                     default:
-                        print("no thing")
+                        print("nothing")
                     }
                 }
             }
@@ -142,7 +146,7 @@ class Analyzer:ObservableObject {
             myEntityName, predicate: nil, sort: [["id":true]], limit: nil)
         if let results = selectResult {
             for result in results {
-                receipts.append(Receipt(id: result.value(forKey: "id")! as! String , date: result.value(forKey: "date")! as! String, prize: result.value(forKey: "prize")! as! Int, isDrawn: result.value(forKey: "isDrawn")! as! Bool))
+                receipts.append(Receipt(id: result.value(forKey: "id")! as! String , date: result.value(forKey: "date")! as! String, prize: result.value(forKey: "prize")! as! Int, isDrawn: result.value(forKey: "isDrawn")! as! Bool, amount: result.value(forKey: "amount")! as! Int))
             }
         }
     }
@@ -155,7 +159,8 @@ class Analyzer:ObservableObject {
             "date" : "\(tempReceipt.date)",
             "id" : "\(tempReceipt.id)",
             "isDrawn" : "\(tempReceipt.isDrawn)",
-            "prize" : "\(tempReceipt.prize)"
+            "prize" : "\(tempReceipt.prize)",
+            "amount" : "\(tempReceipt.amount)"
         ])
         if insertResult {
             print("新增資料成功")

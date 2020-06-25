@@ -9,9 +9,11 @@
 import SwiftUI
 
 struct ReceiptListView: View {
+    @EnvironmentObject var analyzer: Analyzer
     var body: some View {
-        // 發票列表放置處
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(self.analyzer.receipts.indices) { (index) in
+            ReceiptRowView(receipt: self.analyzer.receipts[index])
+        }
     }
 }
 
