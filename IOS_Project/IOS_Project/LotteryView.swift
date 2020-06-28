@@ -21,9 +21,9 @@ struct LotteryView: View {
                     }
                 }){
                     Image("back")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 30,height:30)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30,height:30)
                 }
                 .buttonStyle(PlainButtonStyle())
                 Text("\(self.tempReceiptLottery.Year)年\(self.tempReceiptLottery.months[0])月/\(self.tempReceiptLottery.months[1])月")
@@ -35,22 +35,22 @@ struct LotteryView: View {
                     }
                 }){
                     Image("next")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 30,height:30)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30,height:30)
                 }
                 .buttonStyle(PlainButtonStyle())
             }
             .padding([.top, .bottom], 10)
             Text("統一發票中獎號碼")
                 .font(.system(size: 30))
-            VStack(alignment: .leading, spacing: 10){
+            VStack(alignment: .leading, spacing: 30){
                 HStack(alignment: .top){
                     Text("特別獎")
                         .font(.system(size: 24))
                     VStack(alignment: .leading){
                         Text("\(self.tempReceiptLottery.specialPrize)")
-                        .font(.system(size: 24))
+                            .font(.system(size: 24))
                     }
                 }
                 HStack(alignment: .top){
@@ -58,7 +58,7 @@ struct LotteryView: View {
                         .font(.system(size: 24))
                     VStack(alignment: .leading){
                         Text("\(self.tempReceiptLottery.grandPrize)")
-                        .font(.system(size: 24))
+                            .font(.system(size: 24))
                     }
                     
                 }
@@ -67,11 +67,11 @@ struct LotteryView: View {
                         .font(.system(size: 24))
                     VStack(alignment: .leading){
                         Text("\(self.tempReceiptLottery.firstPrize[0])")
-                        .font(.system(size: 24))
+                            .font(.system(size: 24))
                         Text("\(self.tempReceiptLottery.firstPrize[1])")
-                        .font(.system(size: 24))
+                            .font(.system(size: 24))
                         Text("\(self.tempReceiptLottery.firstPrize[2])")
-                        .font(.system(size: 24))
+                            .font(.system(size: 24))
                     }
                     
                 }

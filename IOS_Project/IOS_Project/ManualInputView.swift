@@ -27,13 +27,13 @@ struct ManualInputView: View {
             VStack(alignment: .leading, spacing: 10){
                 Text("發票日期")
                 DatePicker("",selection: $receiptDate, displayedComponents: .date)
-                .labelsHidden()
+                    .labelsHidden()
                 Text("發票號碼")
                 TextField("英文２碼＋數字８碼", text: $receiptID)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
                 Text("發票金額")
                 TextField("發票金額", value: $receiptAmount, formatter: NumberFormatter())
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             .padding([.leading, .trailing], 30)
             VStack(alignment: .center){

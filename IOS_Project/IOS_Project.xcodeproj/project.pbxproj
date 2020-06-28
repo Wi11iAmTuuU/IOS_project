@@ -342,14 +342,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"IOS_Project/Preview Content\"";
-				DEVELOPMENT_TEAM = 62AMN3F46R;
+				DEVELOPMENT_TEAM = 6L2P9FBHYM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = IOS_Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-0590026";
+				PRODUCT_BUNDLE_IDENTIFIER = "ntut.IOS-Project";
 				PRODUCT_NAME = "怪獸發票";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -362,14 +362,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"IOS_Project/Preview Content\"";
-				DEVELOPMENT_TEAM = 62AMN3F46R;
+				DEVELOPMENT_TEAM = 6L2P9FBHYM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = IOS_Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-0590026";
+				PRODUCT_BUNDLE_IDENTIFIER = "ntut.IOS-Project";
 				PRODUCT_NAME = "怪獸發票";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

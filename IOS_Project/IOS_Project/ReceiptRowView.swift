@@ -14,17 +14,25 @@ struct ReceiptRowView: View {
         
         HStack {
             if receipt.isDrawn {
-                
-                Text("中獎")
+                if receipt.prize != 0 {
+                    Text("中獎")
+                        .font(.system(size: 14))
+                        .padding(20)
+                        .background(Circle()
+                        .fill(Color.orange)
+                        .frame(width:55, height:55))
+                } else {
+                    Text("未中")
+                        .font(.system(size: 14))
+                        .padding(20)
+                        .background(Circle()
+                        .fill(Color.gray)
+                        .frame(width:55, height:55))
+                }
+            } else {
+                Text("未開")
                 .font(.system(size: 14))
                 .padding(20)
-                .background(Circle()
-                    .fill(Color.orange)
-                    .frame(width:55, height:55))
-            } else {
-                Text("未中")
-                    .font(.system(size: 14))
-                     .padding(20)
                 .background(Circle()
                 .fill(Color.gray)
                 .frame(width:55, height:55))
@@ -35,7 +43,7 @@ struct ReceiptRowView: View {
                 .padding(.leading)
             Spacer()
             Text(receipt.id)
-            .font(.system(size: 14))
+                .font(.system(size: 14))
             Spacer()
             VStack() {
                 Text("TWD")
