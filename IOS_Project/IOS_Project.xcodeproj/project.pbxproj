@@ -30,7 +30,7 @@
 
 /* Begin PBXFileReference section */
 		5580862324A4E75F00E7C188 /* ReceiptRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptRowView.swift; sourceTree = "<group>"; };
-		63C3272A249683700073B595 /* IOS_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63C3272A249683700073B595 /* 怪獸發票.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "怪獸發票.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C3272D249683700073B595 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63C3272F249683700073B595 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		63C32732249683700073B595 /* IOS_Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IOS_Project.xcdatamodel; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		63C3272B249683700073B595 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				63C3272A249683700073B595 /* IOS_Project.app */,
+				63C3272A249683700073B595 /* 怪獸發票.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,7 +133,7 @@
 				63C32745249684760073B595 /* CodeScanner */,
 			);
 			productName = IOS_Project;
-			productReference = 63C3272A249683700073B595 /* IOS_Project.app */;
+			productReference = 63C3272A249683700073B595 /* 怪獸發票.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -350,7 +350,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-0590026";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "怪獸發票";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -370,7 +370,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-0590026";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "怪獸發票";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

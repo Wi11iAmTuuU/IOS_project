@@ -11,28 +11,35 @@ import SwiftUI
 struct ReceiptRowView: View {
     let receipt: Receipt
     var body: some View {
+        
         HStack {
             if receipt.isDrawn {
+                
                 Text("中獎")
+                .font(.system(size: 14))
+                .padding(20)
                 .background(Circle()
-                    .fill(Color.red)
-                    .frame(width:60, height:60))
-                    .padding(.leading, 9.0)
-                    .padding(.trailing, 9.0)
+                    .fill(Color.orange)
+                    .frame(width:55, height:55))
             } else {
-                Text("未中獎")
+                Text("未中")
+                    .font(.system(size: 14))
+                     .padding(20)
                 .background(Circle()
-                    .fill(Color.gray)
-                    .frame(width:60, height:60))
+                .fill(Color.gray)
+                .frame(width:55, height:55))
             }
             
             Text(receipt.date)
+                .font(.system(size: 14))
                 .padding(.leading)
             Spacer()
             Text(receipt.id)
+            .font(.system(size: 14))
             Spacer()
             VStack() {
                 Text("TWD")
+                    .font(.system(size: 14))
                     .foregroundColor(.gray)
                 Text(String(receipt.amount))
             }

@@ -56,7 +56,7 @@ struct ManualInputView: View {
                         Text("確認")
                             .padding(EdgeInsets(top: 5, leading: 25, bottom: 5, trailing: 25))
                             .font(.system(size: 18))
-                            .background(Color.blue)
+                            .background(Color.orange)
                             .foregroundColor(.white)
                             .cornerRadius(40)
                     }

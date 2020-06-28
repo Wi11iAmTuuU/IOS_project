@@ -12,19 +12,23 @@ struct ContentView: View {
     @EnvironmentObject var analyzer: Analyzer
     var body: some View {
         TabView{
+            ReceiptLotteryView().tabItem {
+                NavigationLink(destination: ReceiptLotteryView().environmentObject(Analyzer())){
+                        Image(systemName: "qrcode.viewfinder")
+                        Text("掃描")
+                    }
+                }
             ReceiptListView().tabItem{
                 NavigationLink(destination: ReceiptListView()){
+                    Image(systemName: "doc.text.fill")
                     Text("列表")
                 }
             }
-            ReceiptLotteryView().tabItem {
-                NavigationLink(destination: ReceiptLotteryView().environmentObject(Analyzer())){
-                    Text("掃描")
-                }
-            }
+           
         }.onAppear {
             self.analyzer.loadData()
         }
+         .accentColor(.orange)
     }
 }
 
